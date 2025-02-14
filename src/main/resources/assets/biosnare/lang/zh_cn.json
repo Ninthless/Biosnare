@@ -1,0 +1,8 @@
+{
+    "item.biosnare.biosnare_net": "生物捕捉网",
+    "item.biosnare.mob_ball": "生物球",
+    "item.biosnare.mob_ball.stored_mob": "已捕获: %s",
+    "itemgroup.biosnare": "生物捕捉",
+    "key.biosnare.interact": "生物捕捉交互",
+    "category.biosnare": "生物捕捉"
+} 

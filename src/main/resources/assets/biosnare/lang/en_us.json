@@ -1,0 +1,8 @@
+{
+    "item.biosnare.biosnare_net": "Bio Snare Net",
+    "item.biosnare.mob_ball": "Mob Ball",
+    "item.biosnare.mob_ball.stored_mob": "Captured: %s",
+    "itemgroup.biosnare": "Bio Snare",
+    "key.biosnare.interact": "Bio Snare Interact",
+    "category.biosnare": "Bio Snare"
+} 

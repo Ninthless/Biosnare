@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "com.biosnare.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"EntityInteractionMixin"
+	],
+	"client": [
+		"MouseMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
