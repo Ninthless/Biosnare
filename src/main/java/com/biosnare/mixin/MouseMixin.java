@@ -38,7 +38,9 @@ public class MouseMixin {
                     
                     // 手动调用物品的使用方法
                     Hand hand = this.client.player.getMainHandStack().getItem() instanceof BioSnareNetItem ? Hand.MAIN_HAND : Hand.OFF_HAND;
-                    this.client.interactionManager.interactEntity(this.client.player, entity, hand);
+                    if (this.client.interactionManager != null) {
+                        this.client.interactionManager.interactEntity(this.client.player, entity, hand);
+                    }
                 }
             }
         }

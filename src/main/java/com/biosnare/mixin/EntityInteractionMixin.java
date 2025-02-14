@@ -3,6 +3,8 @@ package com.biosnare.mixin;
 import com.biosnare.item.BioSnareNetItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.passive.MerchantEntity;
+import net.minecraft.entity.passive.AbstractHorseEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -18,7 +20,12 @@ public class EntityInteractionMixin {
     private void onInteract(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
         Entity thisEntity = (Entity)(Object)this;
         // 如果玩家手持捕捉网且目标是生物实体
-        if (player.getStackInHand(hand).getItem() instanceof BioSnareNetItem && thisEntity instanceof LivingEntity) {
+        if (player.getStackInHand(hand).getItem() instanceof BioSnareNetItem net && thisEntity instanceof LivingEntity) {
+            // 特殊实体类型的处理已经由InteractableEntityMixin处理
+            if (thisEntity instanceof MerchantEntity || thisEntity instanceof AbstractHorseEntity) {
+                return;
+            }
+
             // 如果在客户端，直接返回SUCCESS来阻止默认交互
             if (player.getWorld().isClient) {
                 cir.setReturnValue(ActionResult.SUCCESS);
@@ -27,10 +34,8 @@ public class EntityInteractionMixin {
             }
             
             // 在服务端执行捕捉逻辑
-            BioSnareNetItem net = (BioSnareNetItem)player.getStackInHand(hand).getItem();
-            net.useOnEntity(player.getStackInHand(hand), player, (LivingEntity)thisEntity, hand);
-            // 无论结果如何都取消后续交互
-            cir.setReturnValue(ActionResult.SUCCESS);
+            ActionResult result = net.useOnEntity(player.getStackInHand(hand), player, (LivingEntity)thisEntity, hand);
+            cir.setReturnValue(result);
             cir.cancel();
         }
     }

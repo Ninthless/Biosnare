@@ -18,7 +18,6 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import java.util.List;
 import java.util.Optional;
@@ -50,7 +49,10 @@ public class MobBallItem extends Item {
                             SoundEvents.ENTITY_ITEM_FRAME_REMOVE_ITEM, SoundCategory.PLAYERS,
                             0.5F, 1.0F);
 
-                    // 如果不是创造模式，消耗物品
+                    // 清除NBT数据
+                    stack.setNbt(null);
+                    
+                    // 在生存模式下消耗物品
                     if (!user.getAbilities().creativeMode) {
                         stack.decrement(1);
                     }

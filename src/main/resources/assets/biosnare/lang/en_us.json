@@ -2,7 +2,13 @@
     "item.biosnare.biosnare_net": "Bio Snare Net",
     "item.biosnare.mob_ball": "Mob Ball",
     "item.biosnare.mob_ball.stored_mob": "Captured: %s",
+    "item.biosnare.mob_ball.empty": "Empty",
     "itemgroup.biosnare": "Bio Snare",
     "key.biosnare.interact": "Bio Snare Interact",
-    "category.biosnare": "Bio Snare"
+    "category.biosnare": "Bio Snare",
+    "message.biosnare.capture_success": "Successfully captured the creature!",
+    "message.biosnare.capture_fail": "Failed to capture!",
+    "message.biosnare.release_success": "Successfully released the creature!",
+    "message.biosnare.release_fail": "Failed to release!",
+    "tooltip.biosnare.durability": "Durability: %d"
 } 

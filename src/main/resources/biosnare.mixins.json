@@ -4,7 +4,9 @@
 	"package": "com.biosnare.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"EntityInteractionMixin"
+		"EntityInteractionMixin",
+		"HorseEntityMixin",
+		"VillagerEntityMixin"
 	],
 	"client": [
 		"MouseMixin"

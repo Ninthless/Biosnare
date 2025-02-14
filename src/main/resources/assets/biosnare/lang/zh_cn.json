@@ -2,7 +2,13 @@
     "item.biosnare.biosnare_net": "生物捕捉网",
     "item.biosnare.mob_ball": "生物球",
     "item.biosnare.mob_ball.stored_mob": "已捕获: %s",
+    "item.biosnare.mob_ball.empty": "空",
     "itemgroup.biosnare": "生物捕捉",
     "key.biosnare.interact": "生物捕捉交互",
-    "category.biosnare": "生物捕捉"
+    "category.biosnare": "生物捕捉",
+    "message.biosnare.capture_success": "成功捕获生物！",
+    "message.biosnare.capture_fail": "捕获失败！",
+    "message.biosnare.release_success": "成功释放生物！",
+    "message.biosnare.release_fail": "释放失败！",
+    "tooltip.biosnare.durability": "剩余耐久度: %d"
 } 
