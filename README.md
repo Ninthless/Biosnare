@@ -1,8 +1,8 @@
 # BioSnare - 生物捕捉模组
 # BioSnare - Mob Capture Mod
 
-一个简单而有趣的 Minecraft 模组，允许玩家捕捉和收集各种生物。
-A simple and fun Minecraft mod that allows players to capture and collect various creatures.
+一个简单而有趣的 Minecraft 1.20.1 模组，允许玩家捕捉和收集各种生物。
+A simple and fun Minecraft 1.20.1 mod that allows players to capture and collect various creatures.
 
 ## 功能特点
 ## Features
